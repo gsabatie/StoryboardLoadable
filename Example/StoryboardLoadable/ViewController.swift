@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoryboardLoadable
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didTouchButton(_ sender: Any) {
+        let redVC: RedViewController = UIStoryboard.loadViewController()
+        self.present(redVC, animated: true, completion: nil)
+    }
 }
 
